@@ -1,0 +1,48 @@
+Default KiCad symbol fill color: RGB(255, 255, 194)
+
+KiCad Libraries Structure
+Symbol Library:
+.kicad_sym FILE
+
+Footprint Library:
+.pretty FOLDER with
+.kicad_mod FILES
+
+3D Model Library:
+.3dshapes FOLDER with
+.step/.wrl FILES
+https://forum.kicad.info/t/what-is-the-difference-between-step-and-wrl-3d-models/17346
+
+
+
+Repo folder structure
+ReadMe markdown file
+- Description
+- Assembly Instructions
+- Usage Instructions
+- Components list with links
+KiCad Libraries/
+- Symbol Library
+- Footprint Library
+- 3D Model Library
+Module 1/
+Module 2/
+Module 3/
+
+In each module:
+KiCad project folder/
+Images/
+- Schematics
+- Photos
+3D Models/
+- KiCad models
+- Module models
+Code/
+
+
+
+LED resistors, 5V supply voltage
+Color | Used | Tested Forward Voltage | For 20mA | For 15mA
+------+------+------------------------+----------+----------
+RED   | 220Ω |         ~1.8V          |   160Ω   |   213Ω
+GREEN | 100Ω |         ~2.3V          |   135Ω   |   180Ω

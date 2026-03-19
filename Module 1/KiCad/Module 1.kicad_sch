@@ -1912,6 +1912,12 @@
 		(uuid "a497f954-1112-4dab-8605-b2f51a2700e2")
 	)
 	(junction
+		(at 102.87 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a671cf42-02c9-448a-9dbf-943642820dda")
+	)
+	(junction
 		(at 124.46 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3055,6 +3061,72 @@
 			(project ""
 				(path "/8aed8e43-d237-4a6d-a7fe-22d8baa8c839"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 102.87 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "33301f1c-5ce4-4261-8de7-b79cbf9cf43c")
+		(property "Reference" "#PWR04"
+			(at 106.68 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 99.822 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 102.87 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a0643e90-0e55-49c7-9078-0c1eac844ecf")
+		)
+		(instances
+			(project "Module 1"
+				(path "/8aed8e43-d237-4a6d-a7fe-22d8baa8c839"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)

@@ -1,2 +1,5 @@
 # KiCad project settings file
 *.kicad_prl
+
+# Temporary files
+~*

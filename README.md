@@ -7,6 +7,7 @@ To Do:
 - [ ] Add a photo of the gears board
 - [ ] Specify the order of the colors of the cables in Module 1
 - [ ] Add more to the main description
+- [ ] Talk about using the colored tape on the cement resistors
 
 # IEEE Computer Society - Escape Room
 
@@ -15,8 +16,8 @@ This Escape Room was an event hosted by the IEEE Computer Society at Florida Pol
 ---
 
 ## Components list
-- x3 [Arduino UNO R3](https://www.amazon.com/dp/B01EWOE0UU)
-- x3 [DFPlayer Pro](https://www.dfrobot.com/product-2232.html)
+- x3 [Arduino UNO R3](https://www.amazon.com/dp/B01EWOE0UU) (or compatible)
+- x3 [DFPlayer Pro module](https://www.dfrobot.com/product-2232.html)
 - x3 [Speaker](https://www.amazon.com/dp/B0BHST51PQ)
 - x3 [Breadboard](https://www.amazon.com/dp/B0DBQ8ML2T)
 - x1 [Cement Resistors Pack](https://www.amazon.com/dp/B0DCJS5TDJ)

@@ -1456,6 +1456,273 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "IEEE_CS_Escape_Room_Symbols_v1:SW_Lock_NC_NO"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_Lock_NC_NO"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.amazon.com/dp/B0068AGC2Q"
+				(at 0 -7.112 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Big red emergency button that locks when pressed and needs a key to be released. It has 2 rails, one is normally closed and the other is normally open."
+				(at 0 -9.398 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_Lock_NC_NO_0_1"
+				(circle
+					(center -1.9812 1.27)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -1.9812 -3.81)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.635) (xy 0 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.254) (xy 0 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.778) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.9812 1.27)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 1.9812 -3.81)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.635) (xy -2.54 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy -2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 1.27 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -3.81 0)
+					(length 2.54)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -3.81 180)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "SW_Lock_NC_NO_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -5.715)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at -5.08 1.27 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "IEEE_CS_Escape_Room_Symbols_v1:SW_Push_SPDT_LED"
 			(pin_names
 				(hide yes)
@@ -2063,7 +2330,7 @@
 		(at 90.17 91.44)
 		(diameter 0)
 		(color 0 0 0 1)
-		(uuid "10255cd7-d366-4030-95f1-491abae3d5ab")
+		(uuid "09efbfc1-432d-4dea-bfea-398d44c20f91")
 	)
 	(junction
 		(at 90.17 116.84)
@@ -2090,14 +2357,16 @@
 		(uuid "a2545398-bf26-4dd8-ba19-a75e582b714e")
 	)
 	(junction
+		(at 90.17 82.55)
+		(diameter 0)
+		(color 0 0 0 1)
+		(uuid "bac832a5-1167-4e51-8318-b110dcf2bea9")
+	)
+	(junction
 		(at 90.17 104.14)
 		(diameter 0)
 		(color 0 0 0 1)
 		(uuid "feb9c8fb-973c-4628-8421-84555f51761d")
-	)
-	(no_connect
-		(at 121.92 110.49)
-		(uuid "f88d728a-0c42-45e5-91ce-1caf5943622b")
 	)
 	(wire
 		(pts
@@ -2159,6 +2428,17 @@
 			(type default)
 		)
 		(uuid "148b5131-3e3b-4002-92b5-8597f5d9d338")
+	)
+	(wire
+		(pts
+			(xy 114.3 110.49) (xy 121.92 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 132 132 1)
+		)
+		(uuid "151152fe-fbd5-47b8-a1e9-09ee5cc7cec5")
 	)
 	(wire
 		(pts
@@ -2399,6 +2679,17 @@
 	)
 	(wire
 		(pts
+			(xy 90.17 82.55) (xy 90.17 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "630c3571-bf74-4b30-a26a-8512fb440c6a")
+	)
+	(wire
+		(pts
 			(xy 147.32 110.49) (xy 158.75 110.49)
 		)
 		(stroke
@@ -2492,6 +2783,17 @@
 	)
 	(wire
 		(pts
+			(xy 114.3 82.55) (xy 114.3 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 132 132 1)
+		)
+		(uuid "908e5b48-4179-44c6-9f5f-5f47948eb467")
+	)
+	(wire
+		(pts
 			(xy 90.17 110.49) (xy 90.17 116.84)
 		)
 		(stroke
@@ -2567,6 +2869,17 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 82.55) (xy 114.3 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 132 132 1)
+		)
+		(uuid "c6aa95df-fff1-4872-baeb-81e12830c938")
+	)
+	(wire
+		(pts
 			(xy 194.31 73.66) (xy 200.66 73.66)
 		)
 		(stroke
@@ -2577,7 +2890,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 88.9) (xy 90.17 91.44)
+			(xy 90.17 80.01) (xy 90.17 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2625,6 +2938,17 @@
 			(type default)
 		)
 		(uuid "dac0d2b9-bd42-454d-a1a3-40c1340ac03f")
+	)
+	(wire
+		(pts
+			(xy 90.17 82.55) (xy 96.52 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "dfcf3f24-321c-498a-963f-9ebef78affa0")
 	)
 	(wire
 		(pts
@@ -3572,6 +3896,92 @@
 			(project "Module 3"
 				(path "/6b1920bf-1ae7-482d-afb4-9147762c4aed"
 					(reference "A1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "IEEE_CS_Escape_Room_Symbols_v1:SW_Lock_NC_NO")
+		(at 101.6 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50ee43e9-bf51-4205-ab0f-ee2062c9629a")
+		(property "Reference" "SW5"
+			(at 101.6 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Lock_NC_NO"
+			(at 101.6 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.amazon.com/dp/B0068AGC2Q"
+			(at 101.6 85.852 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Big red emergency button that locks when pressed and needs a key to be released. It has 2 rails, one is normally closed and the other is normally open."
+			(at 101.6 88.138 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "3db0c8e3-03f5-41da-80ba-eb2fe45450bd")
+		)
+		(pin "2"
+			(uuid "f0844c13-b4a5-4fe3-b397-60989e025d4d")
+		)
+		(pin "4"
+			(uuid "2b0c457f-89bb-4b0b-86fc-80e2ed40e2d6")
+		)
+		(pin "1"
+			(uuid "e43c6c63-c7ec-4ec8-b8ea-9f4e2aec28b4")
+		)
+		(instances
+			(project "Module 3"
+				(path "/6b1920bf-1ae7-482d-afb4-9147762c4aed"
+					(reference "SW5")
 					(unit 1)
 				)
 			)
@@ -4657,7 +5067,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 90.17 88.9 180)
+		(at 90.17 80.01 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4667,7 +5077,7 @@
 		(dnp no)
 		(uuid "c759bde2-6784-4a20-a8ba-8135ebcac959")
 		(property "Reference" "#PWR01"
-			(at 90.17 82.55 0)
+			(at 90.17 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4678,7 +5088,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 90.17 84.836 0)
+			(at 90.17 75.946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4688,7 +5098,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 88.9 0)
+			(at 90.17 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4699,7 +5109,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 88.9 0)
+			(at 90.17 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4710,7 +5120,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 90.17 88.9 0)
+			(at 90.17 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

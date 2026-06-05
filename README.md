@@ -1,6 +1,6 @@
 # Unfinished Documentation
 To Do:
-- [ ] Add Big Red Button to Module 3 Schematic
+- [x] Add Big Red Button to Module 3 Schematic
 - [ ] Add a section about the KiCad custom symbols
 - [ ] Convert components list to a table
 - [ ] Add a section that explains how all modules work

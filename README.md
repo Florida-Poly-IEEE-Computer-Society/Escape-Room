@@ -2,7 +2,7 @@
 To Do:
 - [x] Add Big Red Button to Module 3 Schematic
 - [x] Add a section about the KiCad custom symbols
-- [ ] Convert components list to a table
+- [x] Convert components list to a table
 - [ ] Add a section that explains how all modules work
 - [ ] Add a photo of the gears board
 - [ ] Specify the order of the colors of the cables in Module 1
@@ -16,18 +16,20 @@ This Escape Room was an event hosted by the IEEE Computer Society at Florida Pol
 ---
 
 ## Components list
-- x3 [Arduino UNO R3](https://www.amazon.com/dp/B01EWOE0UU) (or compatible)
-- x3 [DFPlayer Pro module](https://www.dfrobot.com/product-2232.html)
-- x3 [Speaker](https://www.amazon.com/dp/B0BHST51PQ)
-- x3 [Breadboard](https://www.amazon.com/dp/B0DBQ8ML2T)
-- x1 [Cement Resistors Pack](https://www.amazon.com/dp/B0DCJS5TDJ)
-- x4 [RFID Reader RC522 with Card](https://www.amazon.com/dp/B0CCF4SNMF) (Module 2)
-- x4 [SPDT Momentary Push Button Switch with LED](https://www.amazon.com/dp/B01N7HCJ7S) (Module 3)
-- x1 [Big Red Emergency Stop Push Button Switch with Key](https://www.amazon.com/dp/B0068AGC2Q) (Module 3)
-- x18 Resistor (x8 100Ω, x6 220Ω, x4 1kΩ)
-- x14 [LED](https://www.amazon.com/dp/B07N2H23DC) (x4 Red, x2 Yellow, x8 Green)
-- Wires
-- [Colored Tape](https://www.amazon.com/dp/B0D1C74W83)
+Amount | Component | Module
+:---: | :--- | :---:
+x3 | [Arduino UNO R3](https://www.amazon.com/dp/B01EWOE0UU) (or compatible) | All
+x3 | [DFPlayer Pro](https://www.dfrobot.com/product-2232.html) | All
+x3 | [Speaker](https://www.amazon.com/dp/B0BHST51PQ) | All
+x3 | [Breadboard](https://www.amazon.com/dp/B0DBQ8ML2T) | All
+x18 | Resistor (x8 100Ω, x6 220Ω, x4 1kΩ) | All
+x14 | [LED](https://www.amazon.com/dp/B07N2H23DC) (x4 Red, x2 Yellow, x8 Green) | All
+x1 | [Cement Resistors Pack](https://www.amazon.com/dp/B0DCJS5TDJ) | Module 1
+x4 | [RFID Reader RC522 with Card](https://www.amazon.com/dp/B0CCF4SNMF) | Module 2
+x4 | [SPDT Momentary Push Button Switch with LED](https://www.amazon.com/dp/B01N7HCJ7S) | Module 3
+x1 | [Big Red Emergency Stop Push Button Switch with Key](https://www.amazon.com/dp/B0068AGC2Q) | Module 3
+As much as needed | Wires | All
+As much as needed | [Colored Tape](https://www.amazon.com/dp/B0D1C74W83) | Module 1
 
 ## Assembly
 Each module has its own Arduino circuit. All modules are connected to a laptop via USB and controlled by a [Python script](Python/EscapeRoom.py).

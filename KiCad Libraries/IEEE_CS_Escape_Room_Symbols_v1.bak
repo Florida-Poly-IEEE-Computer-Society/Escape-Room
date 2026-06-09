@@ -1276,7 +1276,7 @@
 		)
 		(symbol "SW_Lock_NC_NO_0_1"
 			(circle
-				(center -2.032 1.27)
+				(center -1.9812 1.27)
 				(radius 0.508)
 				(stroke
 					(width 0)
@@ -1287,7 +1287,7 @@
 				)
 			)
 			(circle
-				(center -2.032 -3.81)
+				(center -1.9812 -3.81)
 				(radius 0.508)
 				(stroke
 					(width 0)
@@ -1346,7 +1346,7 @@
 				)
 			)
 			(circle
-				(center 2.032 1.27)
+				(center 1.9812 1.27)
 				(radius 0.508)
 				(stroke
 					(width 0)
@@ -1357,7 +1357,7 @@
 				)
 			)
 			(circle
-				(center 2.032 -3.81)
+				(center 1.9812 -3.81)
 				(radius 0.508)
 				(stroke
 					(width 0)

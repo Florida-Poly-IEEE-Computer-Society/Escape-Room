@@ -470,7 +470,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "IEEE_CS_Escape_Room_Symbols_v1"
+    ]
   },
   "meta": {
     "filename": "Module 3.kicad_pro",

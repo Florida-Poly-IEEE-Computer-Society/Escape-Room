@@ -1,7 +1,7 @@
 # Unfinished Documentation
 To Do:
 - [x] Add Big Red Button to Module 3 Schematic
-- [ ] Add a section about the KiCad custom symbols
+- [x] Add a section about the KiCad custom symbols
 - [ ] Convert components list to a table
 - [ ] Add a section that explains how all modules work
 - [ ] Add a photo of the gears board
@@ -115,6 +115,53 @@ To reset the game, follow these instructions:
 2) Module 2: Hide all 4 RFID cards around the room
 3) Press the reset button on the Arduino board of each module
 4) Run the Python script again
+
+## Custom KiCad Symbols
+
+Five custom KiCad symbols were made for this project:
+1) Arduino UNO R3
+2) DFPlayer Pro
+3) RC522 RFID Reader Module
+4) SPDT Momentary Push Button Switch with LED
+5) Big Red Emergency Stop Push Button with Key
+
+### Arduino UNO R3
+Even though KiCad has an Arduino UNO R3 symbol by default, its pinout is not arranged as in the physical board. This custom symbol fixes that.
+
+<img src="KiCad Libraries/Images/Arduino_UNO_R3.png" alt="Arduino_UNO_R3 Custom Symbol" height="500">
+
+### DFPlayerPro
+The DFPlayerPro is an audio file player module made by [DFRobot](https://www.dfrobot.com/), it has 128MB of storage.
+
+<img src="KiCad Libraries/Images/DFPlayerPro.png" alt="DFPlayerPro Custom Symbol" height="250">
+
+<img src="KiCad Libraries/Images/DFPlayerPro Photo.png" alt="Photo of DFPlayerPro" height="250">\
+[Source](https://www.dfrobot.com/product-2232.html)
+
+### RC522 RFID Reader Module
+
+RFID Reader Module based on the MFRC522 IC.
+
+<img src="KiCad Libraries/Images/RFID_Reader_RC522.png" alt="RFID_Reader_RC522 Custom Symbol" height="300">
+
+<img src="KiCad Libraries/Images/RFID Reader.png" alt="Photo of RFID Reader" height="250">\
+[Source](https://www.hotmcu.com/mifare-1356mhz-rc522-rfid-card-reader-module-p-84.html)
+
+### Single-Pole Double-Throw Momentary Push Button Switch with LED
+These are the buttons used in Module 3.
+
+<img src="KiCad Libraries/Images/SW_Push_SPDT_LED.png" alt="SW_Push_SPDT_LED Custom Symbol" height="250">
+
+<img src="KiCad Libraries/Images/SPDT Switch 1.png" alt="Photo 1 of SPDT Switch with LED" height="250"><img src="KiCad Libraries/Images/SPDT Switch 2.png" alt="Photo 2 of SPDT Switch with LED" height="250">\
+[Source](https://www.amazon.com/dp/B01N7HCJ7S)
+
+### Big Red Emergency Stop Push Button with Key
+This is the Big Red Button used in Module 3 to choose an ending.
+
+<img src="KiCad Libraries/Images/SW_Lock_NC_NO.png" alt="SW_Lock_NC_NO Custom Symbol" height="250">
+
+<img src="KiCad Libraries/Images/Big Red Button 1.png" alt="Photo 1 of Big Red Emergency Button" height="250"><img src="KiCad Libraries/Images/Big Red Button 2.png" alt="Photo 2 of Big Red Emergency Button" height="250">\
+[Source](https://www.amazon.com/dp/B0068AGC2Q)
 
 ## Extra Photos
 ### Module 1

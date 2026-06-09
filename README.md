@@ -4,7 +4,7 @@ To Do:
 - [x] Add a section about the KiCad custom symbols
 - [x] Convert components list to a table
 - [x] Add a section that explains how all modules work
-- [ ] Add a photo of the gears board
+- [x] Add a photo of the gears board
 - [x] Specify the order of the colors of the cables in Module 1
 - [ ] Add more to the main description
 - [x] Talk about using the colored tape on the cement resistors
@@ -43,7 +43,7 @@ Apart from the chosen four resistors, 2-4 more resistors are picked from the pac
 
 A resistor color code guide is printed, which will be placed next to the cement resistors during the game, to help the players figure out which resistors are needed to complete the puzzle.
 
-<img src="Module 1/Images/Cement Resistors.png" alt="Photo of the cement resistors" height= "250">
+<img src="Module 1/Images/Cement Resistors.jpg" alt="Photo of the cement resistors" height= "500">
 
 ### Gears Board
 A gears board is laser cut to help players solve the second puzzle of Module 1. To determine the correct connection slot for a cable, the players need to turn the gears until the two marks of the desired color are aligned, revealing a number next to a third mark of the same color.
@@ -54,10 +54,10 @@ The chosen arrangement of cables was:
 3) Blue
 4) Yellow
 
-<img src="Module 1/Images/Gears Board - Green Solution.png" alt="Photo of the gears board in the GREEN position" height= "250">
-<img src="Module 1/Images/Gears Board - Red Solution.png" alt="Photo of the gears board in the RED position" height= "250">
-<img src="Module 1/Images/Gears Board - Blue Solution.png" alt="Photo of the gears board in the BLUE position" height= "250">
-<img src="Module 1/Images/Gears Board - Yellow Solution.png" alt="Photo of the gears board in the YELLOW position" height= "250">
+<img src="Module 1/Images/Gears Board - Green Solution_Annotated.jpg" alt="Photo of the gears board in the GREEN position" height="420">
+<img src="Module 1/Images/Gears Board - Red Solution_Annotated.jpg" alt="Photo of the gears board in the RED position" height="420">
+<img src="Module 1/Images/Gears Board - Blue Solution_Annotated.jpg" alt="Photo of the gears board in the BLUE position" height="420">
+<img src="Module 1/Images/Gears Board - Yellow Solution_Annotated.jpg" alt="Photo of the gears board in the YELLOW position" height="420">
 
 ### Schematics
 These are the schematics for the Arduino circuits of each module.
@@ -135,7 +135,7 @@ To complete Module 1, the players need to solve two puzzles (in any order):
 
 To complete Module 2, the players need to find the RFID cards hidden around the room and place them on the card slots in the correct order. A green LED below each slot will be turned on when the correct RFID card is placed on it.
 
-To complete Module 3, the players need to play a game of [Simon](https://en.wikipedia.org/wiki/Simon_(game)) by inputting the correct sequence of colors six times in a row. Each of the six LEDs will be turned on after each sequence is correctly repeated.
+To complete Module 3, the players need to play a game of Simon by inputting the correct sequence of colors six times in a row. Each of the six LEDs will be turned on after each sequence is correctly repeated.
 
 To choose an ending, the players need to either do nothing or press the Big Red Button before the timer runs out after completing all modules.
 
@@ -209,7 +209,7 @@ This is the Big Red Button used in Module 3 to choose an ending.
 <img src="Module 1/Images/Photo4.jpg" alt="Module 1 Photo 4" height="500">
 
 <img src="Module 1/Images/Photo5.jpg" alt="Module 1 Photo 5" height="500">
-<img src="Module 1/Images/Gears Board.png" alt="Photo of the gears board" height= "500">
+<img src="Module 1/Images/Gears Board.jpg" alt="Photo of the gears board" height= "500">
 
 ### Module 2
 <img src="Module 2/Images/Photo2.jpg" alt="Module 2 Photo 2" height="500">

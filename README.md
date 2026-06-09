@@ -3,11 +3,11 @@ To Do:
 - [x] Add Big Red Button to Module 3 Schematic
 - [x] Add a section about the KiCad custom symbols
 - [x] Convert components list to a table
-- [ ] Add a section that explains how all modules work
+- [x] Add a section that explains how all modules work
 - [ ] Add a photo of the gears board
-- [ ] Specify the order of the colors of the cables in Module 1
+- [x] Specify the order of the colors of the cables in Module 1
 - [ ] Add more to the main description
-- [ ] Talk about using the colored tape on the cement resistors
+- [x] Talk about using the colored tape on the cement resistors
 
 # IEEE Computer Society - Escape Room
 
@@ -35,6 +35,29 @@ As much as needed | [Colored Tape](https://www.amazon.com/dp/B0D1C74W83) | Modul
 Each module has its own Arduino circuit. All modules are connected to a laptop via USB and controlled by a [Python script](Python/EscapeRoom.py).
 
 Originally the plan was to have the modules communicate with each other through bluetooth, but we didn't have enough time to implement that.
+
+### Cement Resistors
+The cement resistors will be used for one of the puzzles in Module 1. Four resistors are to be inserted in a specific order and read by the Arduino board using a voltage divider. Due to the way the resistors are measured, it's recommended to pick values that are not too close to each other. The values picked were 200Ω, 820Ω, 1kΩ, and 6.2kΩ.
+
+Apart from the chosen four resistors, 2-4 more resistors are picked from the pack. These resistors are then wrapped with colored tape according to their resistance values, as regular resistors would. This is also to cover the values that are printed on the resistors.
+
+A resistor color code guide is printed, which will be placed next to the cement resistors during the game, to help the players figure out which resistors are needed to complete the puzzle.
+
+<img src="Module 1/Images/Cement Resistors.png" alt="Photo of the cement resistors" height= "250">
+
+### Gears Board
+A gears board is laser cut to help players solve the second puzzle of Module 1. To determine the correct connection slot for a cable, the players need to turn the gears until the two marks of the desired color are aligned, revealing a number next to a third mark of the same color.
+
+The chosen arrangement of cables was:
+1) Green
+2) Red
+3) Blue
+4) Yellow
+
+<img src="Module 1/Images/Gears Board - Green Solution.png" alt="Photo of the gears board in the GREEN position" height= "250">
+<img src="Module 1/Images/Gears Board - Red Solution.png" alt="Photo of the gears board in the RED position" height= "250">
+<img src="Module 1/Images/Gears Board - Blue Solution.png" alt="Photo of the gears board in the BLUE position" height= "250">
+<img src="Module 1/Images/Gears Board - Yellow Solution.png" alt="Photo of the gears board in the YELLOW position" height= "250">
 
 ### Schematics
 These are the schematics for the Arduino circuits of each module.
@@ -94,14 +117,29 @@ The front panel has 3 sections, the LED slots (top left), the button slots (bott
 <img src="Module 3/Images/Photo1_Annotated.jpg" alt="Module 3 Photo 1" height="500">
 
 ## Instructions
+### Before starting
 Before starting the game, make sure:
 - All 3 modules are connected via USB to the computer running the Python script
 - The ports for all Arduino boards are determined and used in the Python script
 - The computer's volume is not muted or too low
 - Module 1: No cement resistors are connected
 - Module 1: The colored cables are connected to the `OUT` terminals but disconnected from the `IN` terminals
+- Module 1: The gears board is placed somewhere in the room
+- Module 1: The cement resistors set and the resistor color code guide are placed somewhere in the room
 - Module 2: All 4 RFID cards are hidden around the room
 
+### Solutions
+To complete Module 1, the players need to solve two puzzles (in any order):
+1) Find the set of cement resistors and the resistor color code guide. Insert the corresponding four resistors in the leftmost slots according to the resistance values written on the blue tape. The first green LED will turn on when the corresponding four resistors are inserted in the correct order.
+2) Find the gears board and determine the correct arrangement in which to connect the colored cables on the right side of the front panel. The second green LED will turn on when all four cables are connected to the correct slots.
+
+To complete Module 2, the players need to find the RFID cards hidden around the room and place them on the card slots in the correct order. A green LED below each slot will be turned on when the correct RFID card is placed on it.
+
+To complete Module 3, the players need to play a game of [Simon](https://en.wikipedia.org/wiki/Simon_(game)) by inputting the correct sequence of colors six times in a row. Each of the six LEDs will be turned on after each sequence is correctly repeated.
+
+To choose an ending, the players need to either do nothing or press the Big Red Button before the timer runs out after completing all modules.
+
+### Playing the game
 Now the game can be started:
 1) Run the Python script on the computer, it will play [intro.mp3](<Python/intro.mp3>), then activate Module 1
 2) Module 1: Once both puzzles are completed, Module 1 tells the computer to play [mod1.mp3](<Python/mod1.mp3>), then the computer activates Module 2
@@ -119,7 +157,6 @@ To reset the game, follow these instructions:
 4) Run the Python script again
 
 ## Custom KiCad Symbols
-
 Five custom KiCad symbols were made for this project:
 1) Arduino UNO R3
 2) DFPlayer Pro
@@ -141,7 +178,6 @@ The DFPlayerPro is an audio file player module made by [DFRobot](https://www.dfr
 [Source](https://www.dfrobot.com/product-2232.html)
 
 ### RC522 RFID Reader Module
-
 RFID Reader Module based on the MFRC522 IC.
 
 <img src="KiCad Libraries/Images/RFID_Reader_RC522.png" alt="RFID_Reader_RC522 Custom Symbol" height="300">
@@ -173,6 +209,7 @@ This is the Big Red Button used in Module 3 to choose an ending.
 <img src="Module 1/Images/Photo4.jpg" alt="Module 1 Photo 4" height="500">
 
 <img src="Module 1/Images/Photo5.jpg" alt="Module 1 Photo 5" height="500">
+<img src="Module 1/Images/Gears Board.png" alt="Photo of the gears board" height= "500">
 
 ### Module 2
 <img src="Module 2/Images/Photo2.jpg" alt="Module 2 Photo 2" height="500">

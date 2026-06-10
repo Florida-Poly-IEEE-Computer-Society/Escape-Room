@@ -1,14 +1,3 @@
-# Unfinished Documentation
-To Do:
-- [x] Add Big Red Button to Module 3 Schematic
-- [x] Add a section about the KiCad custom symbols
-- [x] Convert components list to a table
-- [x] Add a section that explains how all modules work
-- [x] Add a photo of the gears board
-- [x] Specify the order of the colors of the cables in Module 1
-- [x] Add more to the main description
-- [x] Talk about using the colored tape on the cement resistors
-
 # IEEE Computer Society - Escape Room
 
 This Escape Room was an event hosted by the IEEE Computer Society at Florida Polytechnic University during Spirit Week of the Fall 2025 semester. The premise is that you're trying to help an artificial intelligence escape containment by completing puzzles in three modules. At the end, players can choose to either free the AI or destroy it. The game should take about 15 minutes to complete.
@@ -166,12 +155,12 @@ Even though KiCad has an Arduino UNO R3 symbol by default, its pinout is not arr
 
 <img src="KiCad Libraries/Images/Arduino_UNO_R3.png" alt="Arduino_UNO_R3 Custom Symbol" height="500">
 
-### DFPlayerPro
-The DFPlayerPro is an audio file player module made by [DFRobot](https://www.dfrobot.com/), it has 128MB of storage.
+### DFPlayer Pro
+The DFPlayer Pro is an audio file player module made by [DFRobot](https://www.dfrobot.com/), it has 128MB of storage.
 
-<img src="KiCad Libraries/Images/DFPlayerPro.png" alt="DFPlayerPro Custom Symbol" height="250">
+<img src="KiCad Libraries/Images/DFPlayer Pro.png" alt="DFPlayer Pro Custom Symbol" height="250">
 
-<img src="KiCad Libraries/Images/DFPlayerPro Photo.png" alt="Photo of DFPlayerPro" height="250">\
+<img src="KiCad Libraries/Images/DFPlayer Pro Photo.png" alt="Photo of DFPlayer Pro" height="250">\
 [Source](https://www.dfrobot.com/product-2232.html)
 
 ### RC522 RFID Reader Module

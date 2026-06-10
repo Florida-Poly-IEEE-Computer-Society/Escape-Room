@@ -1,4 +1,4 @@
-# IEEE Computer Society - Escape Room
+# IEEE Computer Society - Escape Room (Version 1)
 
 This Escape Room was an event hosted by the IEEE Computer Society at Florida Polytechnic University during Spirit Week of the Fall 2025 semester. The premise is that you're trying to help an artificial intelligence escape containment by completing puzzles in three modules. At the end, players can choose to either free the AI or destroy it. The game should take about 15 minutes to complete.
 

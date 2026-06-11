@@ -1,4 +1,8 @@
-# IEEE Computer Society - Escape Room
+# WORK IN PROGRESS
+
+---
+
+# IEEE Computer Society - Escape Room (Version 2)
 
 This Escape Room was an event hosted by the IEEE Computer Society at Florida Polytechnic University during Spirit Week of the Fall 2025 semester. The premise is that you're trying to help an artificial intelligence escape containment by completing puzzles in three modules. At the end, players can choose to either free the AI or destroy it. The game should take about 15 minutes to complete.
 
@@ -189,23 +193,13 @@ This is the Big Red Button used in Module 3 to choose an ending.
 
 ## Extra Photos
 ### Module 1
-<img src="Module 1/Images/Photo2.jpg" alt="Module 1 Photo 2" height="500">
 
-<img src="Module 1/Images/Photo3.jpg" alt="Module 1 Photo 3" height="500"> <img src="Module 1/Images/Photo4.jpg" alt="Module 1 Photo 4" height="500">
-
-<img src="Module 1/Images/Photo5.jpg" alt="Module 1 Photo 5" height="500"> <img src="Module 1/Images/Gears Board.jpg" alt="Photo of the gears board" height= "500">
 
 ### Module 2
-<img src="Module 2/Images/Photo2.jpg" alt="Module 2 Photo 2" height="500">
 
-<img src="Module 2/Images/Photo4.jpg" alt="Module 2 Photo 4" height="500">
 
 ### Module 3
-<img src="Module 3/Images/Photo2.jpg" alt="Module 3 Photo 2" height="500">
 
-<img src="Module 3/Images/Photo3.jpg" alt="Module 3 Photo 3" height="500">
-
-<img src="Module 3/Images/Photo4.jpg" alt="Module 3 Photo 4" height="500">
 
 # Credits
 **Cyler Gabel**: Game Design, 3D Models\

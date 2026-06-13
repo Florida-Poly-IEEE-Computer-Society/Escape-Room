@@ -1,33 +1,35 @@
 # WORK IN PROGRESS
 
+### Most of this information was copied over from Version 1 and has not been updated yet. For the Version 1 documentation, please go [here](https://github.com/Florida-Poly-IEEE-Computer-Society/Escape-Room/tree/Version-1).
+
 ---
 
 # IEEE Computer Society - Escape Room (Version 2)
 
-This Escape Room was an event hosted by the IEEE Computer Society at Florida Polytechnic University during Spirit Week of the Fall 2025 semester. The premise is that you're trying to help an artificial intelligence escape containment by completing puzzles in three modules. At the end, players can choose to either free the AI or destroy it. The game should take about 15 minutes to complete.
+This is the second version of the Escape Room event to be hosted by the IEEE Computer Society at Florida Polytechnic University. The premise is that you're trying to help an artificial intelligence escape containment by completing puzzles in three modules. At the end, players can choose to either free the AI or destroy it. The game should take about 15? minutes to complete.
 
 ---
 
 ## Components list
 Amount | Component | Module
 :---: | :--- | :---:
-x3 | [Arduino UNO R3](https://www.amazon.com/dp/B01EWOE0UU) (or compatible) | All
+x3 | [ESP32 DEVKIT V1](https://www.amazon.com/dp/B0D8T53CQ5) | All
 x3 | [DFPlayer Pro](https://www.dfrobot.com/product-2232.html) | All
 x3 | [Speaker](https://www.amazon.com/dp/B0BHST51PQ) | All
 x3 | [Breadboard](https://www.amazon.com/dp/B0DBQ8ML2T) | All
 x18 | Resistor (x8 100Ω, x6 220Ω, x4 1kΩ) | All
 x14 | [LED](https://www.amazon.com/dp/B07N2H23DC) (x4 Red, x2 Yellow, x8 Green) | All
 x1 | [Cement Resistors Pack](https://www.amazon.com/dp/B0DCJS5TDJ) | Module 1
-x4 | [RFID Reader RC522 with Card](https://www.amazon.com/dp/B0CCF4SNMF) | Module 2
+x1 | [RFID Reader RC522](https://www.amazon.com/dp/B0CCF4SNMF) | Module 2
+x? | RFID Stickers | Module 2
+x? | Wooden Fruit Toys | Module 2
 x4 | [SPDT Momentary Push Button Switch with LED](https://www.amazon.com/dp/B01N7HCJ7S) | Module 3
 x1 | [Big Red Emergency Stop Push Button Switch with Key](https://www.amazon.com/dp/B0068AGC2Q) | Module 3
 As much as needed | Wires | All
 As much as needed | [Colored Tape](https://www.amazon.com/dp/B0D1C74W83) | Module 1
 
 ## Assembly
-Each module has its own Arduino circuit. All modules are connected to a laptop via USB and controlled by a [Python script](Python/EscapeRoom.py).
-
-Originally the plan was to have the modules communicate with each other through bluetooth, but we didn't have enough time to implement that.
+Each module has its own ESP32 circuit. The modules communicate with each other via the ESP-NOW protocol.
 
 ### Cement Resistors
 The cement resistors will be used for one of the puzzles in Module 1. Four resistors are to be inserted in a specific order and read by the Arduino board using a voltage divider. Due to the way the resistors are measured, it's recommended to pick values that are not too close to each other. The values picked were 200Ω, 820Ω, 1kΩ, and 6.2kΩ.
@@ -50,9 +52,7 @@ The chosen arrangement of cables was:
 <img src="Module 1/Images/Gears Board - Green Solution_Annotated.jpg" alt="Photo of the gears board in the GREEN position" height="420"> <img src="Module 1/Images/Gears Board - Red Solution_Annotated.jpg" alt="Photo of the gears board in the RED position" height="420"> <img src="Module 1/Images/Gears Board - Blue Solution_Annotated.jpg" alt="Photo of the gears board in the BLUE position" height="420"> <img src="Module 1/Images/Gears Board - Yellow Solution_Annotated.jpg" alt="Photo of the gears board in the YELLOW position" height="420">
 
 ### Schematics
-These are the schematics for the Arduino circuits of each module.
-
-Despite each schematic including a DFPlayer Pro and a speaker, the DFPlayer Pro modules were not working properly and we did not have enough time to fix them, so the modules were not included in the final assembly and the speakers were there just for style points. The audio file for each module is played from the computer running the Python script.
+These are the schematics for the ESP32 circuits of each module.
 
 #### Module 1
 This module uses 4 1kΩ resistors to make 4 voltage dividers with the inserted cement resistors, this is how their values are detected by the Arduino.

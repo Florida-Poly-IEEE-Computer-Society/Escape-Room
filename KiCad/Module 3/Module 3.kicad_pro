@@ -471,7 +471,8 @@
   "libraries": {
     "pinned_footprint_libs": [],
     "pinned_symbol_libs": [
-      "IEEE_CS_Escape_Room_Symbols_v1"
+      "IEEE_CS_Escape_Room_Symbols_v1",
+      "IEEE_CS_Escape_Room_Symbols_v2"
     ]
   },
   "meta": {
@@ -647,7 +648,7 @@
         "uuid": "6b1920bf-1ae7-482d-afb4-9147762c4aed"
       }
     ],
-    "used_designators": "SW5-7",
+    "used_designators": "SW5-7,ESP1",
     "variants": []
   },
   "sheets": [

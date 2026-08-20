@@ -411,7 +411,7 @@
 				)
 				(fill
 					(type color)
-					(color 255 153 0 1)
+					(color 255 185 115 1)
 				)
 			)
 			(rectangle
@@ -423,7 +423,7 @@
 				)
 				(fill
 					(type color)
-					(color 255 153 0 1)
+					(color 255 185 115 1)
 				)
 			)
 			(rectangle
@@ -435,7 +435,7 @@
 				)
 				(fill
 					(type color)
-					(color 255 0 0 1)
+					(color 255 105 105 1)
 				)
 			)
 			(rectangle
@@ -447,7 +447,7 @@
 				)
 				(fill
 					(type color)
-					(color 255 153 0 1)
+					(color 255 185 115 1)
 				)
 			)
 			(pin power_out line

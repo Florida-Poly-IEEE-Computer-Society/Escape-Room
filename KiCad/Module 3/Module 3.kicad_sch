@@ -1477,6 +1477,19 @@
 					)
 				)
 			)
+			(symbol "ESP32_DEVKIT_V1_0_1"
+				(rectangle
+					(start 10.16 -19.05)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
 			(symbol "ESP32_DEVKIT_V1_1_1"
 				(rectangle
 					(start -10.16 20.32)
@@ -1498,7 +1511,7 @@
 					)
 					(fill
 						(type color)
-						(color 255 153 0 1)
+						(color 255 185 115 1)
 					)
 				)
 				(rectangle
@@ -1510,7 +1523,7 @@
 					)
 					(fill
 						(type color)
-						(color 255 153 0 1)
+						(color 255 185 115 1)
 					)
 				)
 				(rectangle
@@ -1522,7 +1535,7 @@
 					)
 					(fill
 						(type color)
-						(color 255 0 0 1)
+						(color 255 105 105 1)
 					)
 				)
 				(rectangle
@@ -1534,7 +1547,7 @@
 					)
 					(fill
 						(type color)
-						(color 255 153 0 1)
+						(color 255 185 115 1)
 					)
 				)
 				(pin power_out line
@@ -3889,7 +3902,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50ee43e9-bf51-4205-ab0f-ee2062c9629a")
-		(property "Reference" "SW5"
+		(property "Reference" "SW6"
 			(at 92.71 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3957,7 +3970,7 @@
 		(instances
 			(project "Module 3"
 				(path "/6b1920bf-1ae7-482d-afb4-9147762c4aed"
-					(reference "SW5")
+					(reference "SW6")
 					(unit 1)
 				)
 			)
@@ -5028,7 +5041,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b031e4cd-b027-4418-a06c-1da56870c71b")
-		(property "Reference" "SW6"
+		(property "Reference" "SW5"
 			(at 165.1 108.204 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5121,7 +5134,7 @@
 		(instances
 			(project "Module 3"
 				(path "/6b1920bf-1ae7-482d-afb4-9147762c4aed"
-					(reference "SW6")
+					(reference "SW5")
 					(unit 1)
 				)
 			)

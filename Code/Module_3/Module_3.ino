@@ -2,73 +2,64 @@
   Florida Polytechnic University
   IEEE - Computer Society
   Escape Room - Module 3
-  Written by Ramiro Rojas, Aug 2025
-
-  This is exactly what was uploaded to the Arduino UNO board.
-  Due to the short amount of time spent working on this project,
-  this code is not commented and needs cleaning up.
+  Written by Ramiro Rojas, August 2026
 */
 
-#include <Keypad.h>
+#include <OneButton.h>
 #include <DFRobot_DF1201S.h>
 #include <SoftwareSerial.h>
 
+// DFPlayerPro variables
 SoftwareSerial softSerial(2, 3);  //RX, TX
 DFRobot_DF1201S player;
 
-// Variables for the button array
-const byte ROWS = 2;
-const byte COLS = 2;
-char keys[ROWS][COLS] = {
-  {'0','1'},
-  {'2','3'}
-};
-byte rowPins[ROWS] = {8, 9};    //connect to the row pinouts of the keypad
-byte colPins[COLS] = {10, 11}; //connect to the column pinouts of the keypad
-Keypad customKeypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+// Button variables
+OneButton button1(32, true, true);  // Only this pin has an internal pull-up resistor
+OneButton button2(35, true, false);
+OneButton button3(34, true, false);
+OneButton button4(39, true, false);
+OneButton button5(36, true, false);
+const char bigButton = 28;
 
-const int buttonLEDs[4] = {4, 5, 6, 7};
-const int leds[6] = {A5, A4, A3, A2, A1, 13};
-const int bigButton = A0;
+// LED variables
+const char buttonLEDs[5] = {14, 27, 26, 25, 33};
+const char leds[6] = {4, 18, 19, 21, 22, 23};
 
-int index = 0;
-int tempIndex = 0;
-int state = -1;
-int solution[6] = {-1, -1, -1, -1, -1, -1};
+// Simon game variables
+char index = 0;
+char tempIndex = 0;
+char state = -1;
+char solution[6] = {-1, -1, -1, -1, -1, -1};
 
+// Timer variables
 long timerLength = long(4+26) * long(1000);
 long startTime = 0;
 
 void setup() {
-  // put your setup code here, to run once:
   // setupPlayer();
   Serial.begin(57600);
-  pinMode(buttonLEDs[0], OUTPUT);
-  pinMode(buttonLEDs[1], OUTPUT);
-  pinMode(buttonLEDs[2], OUTPUT);
-  pinMode(buttonLEDs[3], OUTPUT);
-  pinMode(leds[0], OUTPUT);
-  pinMode(leds[1], OUTPUT);
-  pinMode(leds[2], OUTPUT);
-  pinMode(leds[3], OUTPUT);
-  pinMode(leds[4], OUTPUT);
+  for(char i = 0; i < 5; i++) {
+    pinMode(buttonLEDs[i], OUTPUT);
+    pinMode(leds[i], OUTPUT);
+  }
   pinMode(leds[5], OUTPUT);
 
-  while(state == -1) {
-    while (!Serial.available());
-    int x = Serial.readString().toInt();
-    // Serial.println(x);
-    if(x == 0) {
-      // digitalWrite(13, HIGH);
-    } else if(x == 1) {
-      digitalWrite(13, LOW);
-      state = 0;
-      // state = 2;
-      // theWin();
-    }
+  // WAIT FOR ESPNOW SIGNAL FROM MODULE 2
+  // while(state == -1) {
+  //   while (!Serial.available());
+  //   int x = Serial.readString().toInt();
+  //   // Serial.println(x);
+  //   if(x == 0) {
+  //     // digitalWrite(13, HIGH);
+  //   } else if(x == 1) {
+  //     digitalWrite(13, LOW);
+  //     state = 0;
+  //     // state = 2;
+  //     // theWin();
+  //   }
   }
 
-  generateGame();
+  // generateGame();
 
   // Serial.print("Started");
   // delay(1000);

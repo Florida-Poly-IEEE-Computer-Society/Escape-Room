@@ -19,7 +19,7 @@ OneButton button2(35, true, false);
 OneButton button3(34, true, false);
 OneButton button4(39, true, false);
 OneButton button5(36, true, false);
-const char bigButton = 28;
+const char bigButton = 13;
 
 // LED variables
 const char buttonLEDs[5] = {14, 27, 26, 25, 33};

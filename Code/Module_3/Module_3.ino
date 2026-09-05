@@ -66,11 +66,20 @@ void setup() {
   // delay(1000);
   // state = 2;
   // theWin();
+
+  state = 0;
 }
 
 void loop() {
-  generateGame();
-  delay(1000);
+  if(state == 0) {
+    generateGame();
+    displaySolution();
+    state = 1;
+  } else if(state == 1) {
+    // handleInput();
+  } else if(state == 2) {
+    // Ending
+  }
   // if(state == 0) {
   //   // printState();
   //   displayCurrentTurn();
@@ -127,15 +136,15 @@ void generateGame() {
 //   Serial.println();
 // }
 
-// void displayCurrentTurn() {
-//   for(int i = 0; i <= index; i++) {
-//     blinkButtonLED(solution[i]);
-//     if(i < index) {
-//       delay(350);
-//     }
-//   }
-//   state = 1;
-// }
+void displaySolution() {
+  for(int i = 0; i < sizeof(solution); i++) {
+    blinkButtonLED(solution[i]);
+    if(i < sizeof(solution)-1) {
+      delay(350);
+    }
+  }
+  // state = 1;
+}
 
 // void handleInput() {
 //   char customKey = customKeypad.getKey();
@@ -178,11 +187,11 @@ void generateGame() {
 //   }
 // }
 
-// void blinkButtonLED(int index) {
-//   digitalWrite(buttonLEDs[index], HIGH);
-//   delay(200);
-//   digitalWrite(buttonLEDs[index], LOW);
-// }
+void blinkButtonLED(int index) {
+  digitalWrite(buttonLEDs[index], HIGH);
+  delay(200);
+  digitalWrite(buttonLEDs[index], LOW);
+}
 
 // void resetLEDs() {
 //   for(int i = 0; i < 6; i++) {

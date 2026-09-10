@@ -17,6 +17,12 @@ void setup() {
   for(char i = 0; i < 5; i++) {
     buttons[i] -> attachPress(press, &chars[i]);
     buttons[i] -> attachClick(click, &chars[i]);
+    // buttons[i] -> attachDoubleClick(doubleClick, &chars[i]);
+    // buttons[i] -> attachMultiClick(multiClick, &chars[i]);
+    // buttons[i] -> attachLongPressStart(longPressStart, &chars[i]);
+    buttons[i] -> attachLongPressStop(longPressStop, &chars[i]);
+    // buttons[i] -> attachDuringLongPress(duringLongPress, &chars[i]);
+    // buttons[i] -> attachIdle(idle);
     pinMode(Bleds[i], OUTPUT);
     pinMode(leds[i], OUTPUT);
   }
@@ -46,3 +52,51 @@ void click(void* index) {
   digitalWrite(Bleds[indexChar], LOW);
   digitalWrite(leds[indexChar], LOW);
 }
+
+// void doubleClick(void* index) {
+//   char indexChar = *(char*)index;
+//   Serial.print("Double Click ");
+//   Serial.println((int)indexChar);
+//   // digitalWrite(Bleds[indexChar], HIGH);
+//   // digitalWrite(leds[indexChar], HIGH);
+// }
+
+// void multiClick(void* index) {
+//   char indexChar = *(char*)index;
+//   Serial.print("Multi Click ");
+//   Serial.println((int)indexChar);
+//   // digitalWrite(Bleds[indexChar], LOW);
+//   // digitalWrite(leds[indexChar], LOW);
+// }
+
+// void longPressStart(void* index) {
+//   char indexChar = *(char*)index;
+//   Serial.print("Long Press Start ");
+//   Serial.println((int)indexChar);
+//   // digitalWrite(Bleds[indexChar], HIGH);
+//   // digitalWrite(leds[indexChar], HIGH);
+// }
+
+void longPressStop(void* index) {
+  char indexChar = *(char*)index;
+  Serial.print("Long Press Stop ");
+  Serial.println((int)indexChar);
+  digitalWrite(Bleds[indexChar], LOW);
+  digitalWrite(leds[indexChar], LOW);
+}
+
+// void duringLongPress(void* index) {
+//   char indexChar = *(char*)index;
+//   Serial.print("During Long Press ");
+//   Serial.println((int)indexChar);
+//   // digitalWrite(Bleds[indexChar], HIGH);
+//   // digitalWrite(leds[indexChar], HIGH);
+// }
+
+// void idle() {
+//   // char indexChar = *(char*)index;
+//   Serial.print("Idle ");
+//   // Serial.println((int)indexChar);
+//   // digitalWrite(Bleds[indexChar], LOW);
+//   // digitalWrite(leds[indexChar], LOW);
+// }

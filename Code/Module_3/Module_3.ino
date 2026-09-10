@@ -15,11 +15,14 @@
 // DFRobot_DF1201S player;
 
 // Button variables
-OneButton button1(32, true, true);  // Only this pin has an internal pull-up resistor
-OneButton button2(35, true, false);
-OneButton button3(34, true, false);
-OneButton button4(39, true, false);
-OneButton button5(36, true, false);
+OneButton *buttons[5] = {
+  new OneButton(32, true, true),  // Only this pin has an internal pull-up resistor
+  new OneButton(35, true, false),
+  new OneButton(34, true, false),
+  new OneButton(39, true, false),
+  new OneButton(36, true, false)
+};
+char chars[5] = {0, 1, 2, 3, 4};
 const char bigButton = 13;
 
 // LED variables
@@ -39,7 +42,11 @@ long startTime = 0;
 void setup() {
   // setupPlayer();
   Serial.begin(115200);
+
   for(char i = 0; i < 5; i++) {
+    buttons[i] -> attachPress(press, &chars[i]);
+    buttons[i] -> attachClick(click, &chars[i]);
+    buttons[i] -> attachLongPressStop(longPressStop, &chars[i]);
     pinMode(buttonLEDs[i], OUTPUT);
     pinMode(leds[i], OUTPUT);
   }
@@ -76,7 +83,9 @@ void loop() {
     displaySolution();
     state = 1;
   } else if(state == 1) {
-    // handleInput();
+    for(char i = 0; i < 5; i++) {
+      buttons[i] -> tick();
+    }
   } else if(state == 2) {
     // Ending
   }
@@ -225,6 +234,30 @@ void blinkButtonLED(int index) {
 //   delay(500);
 //   startTimer();
 // }
+
+void press(void* index) {
+  char indexChar = *(char*)index;
+  Serial.print("Press ");
+  Serial.println((int)indexChar);
+  digitalWrite(buttonLEDs[indexChar], HIGH);
+  digitalWrite(leds[indexChar], HIGH);
+}
+
+void click(void* index) {
+  char indexChar = *(char*)index;
+  Serial.print("Click ");
+  Serial.println((int)indexChar);
+  digitalWrite(buttonLEDs[indexChar], LOW);
+  digitalWrite(leds[indexChar], LOW);
+}
+
+void longPressStop(void* index) {
+  char indexChar = *(char*)index;
+  Serial.print("Long Press Stop ");
+  Serial.println((int)indexChar);
+  digitalWrite(buttonLEDs[indexChar], LOW);
+  digitalWrite(leds[indexChar], LOW);
+}
 
 // void bigButtonPressed() {
 //   resetLEDs();

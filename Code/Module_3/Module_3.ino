@@ -172,29 +172,29 @@ void displaySolution() {
 //   }
 // }
 
-// void guess(int turnIndex) {
-//   blinkButtonLED(turnIndex);
-//   if(turnIndex == solution[tempIndex]) {
-//     // Serial.println("Yuh huh");
-//     if(index == 5 && tempIndex == index) {
-//       state = 2;
-//       theWin();
-//       return;
-//     }
-//   } else {
-//     // Serial.println("Nuh uh");
-//     state = 3;
-//     return;
-//   }
-//   tempIndex++;
-//   if(tempIndex > index) {
-//     state = 0;
-//     index++;
-//     digitalWrite(leds[index-1], HIGH);
-//     tempIndex = 0;
-//     delay(1000);
-//   }
-// }
+void guess(int turnIndex) {
+  // blinkButtonLED(turnIndex);
+  if(turnIndex == solution[tempIndex]) {
+    // Serial.println("Yuh huh");
+    if(index == 5 && tempIndex == index) {
+      state = 2;
+      theWin();
+      return;
+    }
+  } else {
+    // Serial.println("Nuh uh");
+    state = 3;
+    return;
+  }
+  tempIndex++;
+  if(tempIndex > index) {
+    state = 0;
+    index++;
+    digitalWrite(leds[index-1], HIGH);
+    tempIndex = 0;
+    delay(1000);
+  }
+}
 
 void blinkButtonLED(int index) {
   digitalWrite(buttonLEDs[index], HIGH);
@@ -237,26 +237,28 @@ void blinkButtonLED(int index) {
 
 void press(void* index) {
   char indexChar = *(char*)index;
-  Serial.print("Press ");
-  Serial.println((int)indexChar);
+  // Serial.print("Press ");
+  // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], HIGH);
   digitalWrite(leds[indexChar], HIGH);
 }
 
 void click(void* index) {
   char indexChar = *(char*)index;
-  Serial.print("Click ");
-  Serial.println((int)indexChar);
+  // Serial.print("Click ");
+  // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], LOW);
   digitalWrite(leds[indexChar], LOW);
+  guess(indexChar);
 }
 
 void longPressStop(void* index) {
   char indexChar = *(char*)index;
-  Serial.print("Long Press Stop ");
-  Serial.println((int)indexChar);
+  // Serial.print("Long Press Stop ");
+  // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], LOW);
   digitalWrite(leds[indexChar], LOW);
+  guess(indexChar);
 }
 
 // void bigButtonPressed() {

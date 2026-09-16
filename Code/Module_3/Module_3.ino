@@ -30,10 +30,10 @@ const char buttonLEDs[5] = {14, 27, 26, 25, 33};
 const char leds[6] = {4, 18, 19, 21, 22, 23};
 
 // Simon game variables
-char currentIndex = 0;
-char tempIndex = 0;
-signed char state = -1;
+char mainIndex = 0;     // Round number
+char currentIndex = 0;  // Current sequence index
 signed char solution[6] = {-1, -1, -1, -1, -1, -1};
+signed char state = -1;
 
 // Timer variables
 long timerLength = long(4+26) * long(1000);
@@ -87,7 +87,8 @@ void loop() {
       buttons[i] -> tick();
     }
   } else if(state == 2) {
-    // Ending
+    Serial.println("YOU WON");
+    while 1;
   }
   // if(state == 0) {
   //   // printState();
@@ -172,22 +173,23 @@ void displaySolution() {
 //   }
 // }
 
-void guess(int turnIndex) {
+void guess(char index) {
   // blinkButtonLED(turnIndex);
-  if(turnIndex == solution[tempIndex]) {
-    // Serial.println("Yuh huh");
-    if(index == 5 && tempIndex == index) {
+  if(index == solution[currentIndex]) {
+    Serial.println("Yuh huh");
+    if(currentIndex == 5 && mainIndex == 5) {
       state = 2;
-      theWin();
+      // theWin();
       return;
     }
   } else {
-    // Serial.println("Nuh uh");
-    state = 3;
+    Serial.println("Nuh uh");
+    // state = 3;
+    while 1;
     return;
   }
-  tempIndex++;
-  if(tempIndex > index) {
+  currentIndex++;
+  if(currentIndex > 5) {
     state = 0;
     index++;
     digitalWrite(leds[index-1], HIGH);

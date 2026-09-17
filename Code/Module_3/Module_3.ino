@@ -2,7 +2,7 @@
   Florida Polytechnic University
   IEEE - Computer Society
   Escape Room - Module 3
-  Written by Ramiro Rojas, August 2026
+  Written by Ramiro Rojas, August-September 2026
 */
 
 #include <esp_random.h>
@@ -88,7 +88,7 @@ void loop() {
     }
   } else if(state == 2) {
     Serial.println("YOU WON");
-    while 1;
+    while(1);
   }
   // if(state == 0) {
   //   // printState();
@@ -153,7 +153,7 @@ void displaySolution() {
       delay(350);
     }
   }
-  // state = 1;
+  Serial.println("Start guessing");
 }
 
 // void handleInput() {
@@ -177,24 +177,30 @@ void guess(char index) {
   // blinkButtonLED(turnIndex);
   if(index == solution[currentIndex]) {
     Serial.println("Yuh huh");
-    if(currentIndex == 5 && mainIndex == 5) {
-      state = 2;
-      // theWin();
+    currentIndex++;
+    if(currentIndex > 5) {
+      Serial.println("Next round!");
+      digitalWrite(leds[mainIndex], HIGH);
+      currentIndex = 0;
+      mainIndex++;
+      if(mainIndex > 5) {
+        // WIN
+        state = 2;
+        return;
+      } else {
+        delay(1000);
+        state = 0;
+        return;
+      }
+    } else {
       return;
     }
   } else {
     Serial.println("Nuh uh");
-    // state = 3;
-    while 1;
+    currentIndex = 0;
+    delay(2000);
+    displaySolution();
     return;
-  }
-  currentIndex++;
-  if(currentIndex > 5) {
-    state = 0;
-    index++;
-    digitalWrite(leds[index-1], HIGH);
-    tempIndex = 0;
-    delay(1000);
   }
 }
 
@@ -242,7 +248,7 @@ void press(void* index) {
   // Serial.print("Press ");
   // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], HIGH);
-  digitalWrite(leds[indexChar], HIGH);
+  // digitalWrite(leds[indexChar], HIGH);
 }
 
 void click(void* index) {
@@ -250,7 +256,7 @@ void click(void* index) {
   // Serial.print("Click ");
   // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], LOW);
-  digitalWrite(leds[indexChar], LOW);
+  // digitalWrite(leds[indexChar], LOW);
   guess(indexChar);
 }
 
@@ -259,7 +265,7 @@ void longPressStop(void* index) {
   // Serial.print("Long Press Stop ");
   // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], LOW);
-  digitalWrite(leds[indexChar], LOW);
+  // digitalWrite(leds[indexChar], LOW);
   guess(indexChar);
 }
 

@@ -6,3 +6,7 @@
 
 # .history folder that is automatically created, turning this off also turns off automatic backups, so it is left on
 .history/
+
+# Audacity temporary files
+*.aup3-shm
+*.aup3-wal

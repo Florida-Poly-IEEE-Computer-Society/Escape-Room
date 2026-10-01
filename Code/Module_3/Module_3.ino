@@ -7,12 +7,11 @@
 
 #include <esp_random.h>
 #include <OneButton.h>
-// #include <DFRobot_DF1201S.h>
-// #include <SoftwareSerial.h>
+#include <DFRobot_DF1201S.h>
 
 // DFPlayerPro variables
-// SoftwareSerial softSerial(2, 3);  //RX, TX
-// DFRobot_DF1201S player;
+#define DF1201SSerial Serial2
+DFRobot_DF1201S player;
 
 // Button variables
 OneButton *buttons[5] = {
@@ -33,15 +32,15 @@ const char leds[6] = {4, 18, 19, 21, 22, 23};
 char mainIndex = 0;     // Round number
 char currentIndex = 0;  // Current sequence index
 signed char solution[6] = {-1, -1, -1, -1, -1, -1};
-signed char state = -1;
+signed char state = 0;
 
 // Timer variables
 long timerLength = long(4+26) * long(1000);
 long startTime = 0;
 
 void setup() {
-  // setupPlayer();
-  Serial.begin(115200);
+  Serial.begin(9600);
+  setupPlayer();
 
   for(char i = 0; i < 5; i++) {
     buttons[i] -> attachPress(press, &chars[i]);
@@ -69,12 +68,10 @@ void setup() {
 
   // generateGame();
 
-  // Serial.print("Started");
-  // delay(1000);
+  Serial.println("Started");
+  delay(1000);
   // state = 2;
   // theWin();
-
-  state = 0;
 }
 
 void loop() {
@@ -206,8 +203,10 @@ void guess(char index) {
 
 void blinkButtonLED(int index) {
   digitalWrite(buttonLEDs[index], HIGH);
+  player.playFileNum(index + 1);
   delay(200);
   digitalWrite(buttonLEDs[index], LOW);
+  // player.pause();
 }
 
 // void resetLEDs() {
@@ -248,7 +247,7 @@ void press(void* index) {
   // Serial.print("Press ");
   // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], HIGH);
-  // digitalWrite(leds[indexChar], HIGH);
+  player.playFileNum(indexChar + 1);
 }
 
 void click(void* index) {
@@ -256,7 +255,7 @@ void click(void* index) {
   // Serial.print("Click ");
   // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], LOW);
-  // digitalWrite(leds[indexChar], LOW);
+  // player.pause();
   guess(indexChar);
 }
 
@@ -265,7 +264,7 @@ void longPressStop(void* index) {
   // Serial.print("Long Press Stop ");
   // Serial.println((int)indexChar);
   digitalWrite(buttonLEDs[indexChar], LOW);
-  // digitalWrite(leds[indexChar], LOW);
+  // player.pause();
   guess(indexChar);
 }
 
@@ -301,17 +300,17 @@ void longPressStop(void* index) {
 
 
 
-// void setupPlayer() {
-//   softSerial.begin(115200);
-//   while(!player.begin(softSerial)) {
-//     Serial.println("Init failed, please check the wire connection!");
-//     delay(1000);
-//   }
-//   player.setVol(3);
-//   player.switchFunction(player.MUSIC);
-//   player.setPlayMode(player.SINGLE);
-//   // player.setPrompt(false);
-//   player.setPrompt(true);
-//   // player.pause();
-//   // delay(1500);
-// }
+void setupPlayer() {
+  DF1201SSerial.begin(115200, SERIAL_8N1, 16, 17);
+  delay(50);
+  while(!player.begin(DF1201SSerial)) {
+    Serial.println("Init failed, please check the wire connection!");
+    delay(1000);
+  }
+  player.setVol(10);
+  player.switchFunction(player.MUSIC);
+  player.setPlayMode(player.SINGLE);
+  player.setPrompt(false);
+  // player.setPrompt(true);
+  // player.pause();
+}

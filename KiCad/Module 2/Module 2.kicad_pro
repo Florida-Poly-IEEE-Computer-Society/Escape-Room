@@ -645,7 +645,7 @@
         "uuid": "08faaa51-a816-4235-a140-affae01e98e4"
       }
     ],
-    "used_designators": "",
+    "used_designators": "ESP1,#PWR3-6,RFID5,R5",
     "variants": []
   },
   "sheets": [

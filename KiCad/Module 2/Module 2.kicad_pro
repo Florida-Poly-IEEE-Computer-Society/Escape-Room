@@ -454,6 +454,7 @@
       "pin_to_pin": "warning",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
+      "same_local_global_power": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
@@ -501,8 +502,8 @@
     "meta": {
       "version": 5
     },
-    "net_colors": null,
-    "netclass_assignments": null,
+    "net_colors": {},
+    "netclass_assignments": {},
     "netclass_patterns": []
   },
   "pcbnew": {
@@ -645,7 +646,7 @@
         "uuid": "08faaa51-a816-4235-a140-affae01e98e4"
       }
     ],
-    "used_designators": "ESP1,#PWR3-6,RFID5,R5",
+    "used_designators": "#PWR3-6,ESP1,R5,RFID5",
     "variants": []
   },
   "sheets": [
